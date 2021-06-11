@@ -6,6 +6,7 @@
     --font-reg:'Roboto',Roboto-Regular,Arial;
     --font-med:'Roboto',Roboto-Medium,Arial;
     --font-bold:'Roboto',Roboto-Bold,Arial;
+
     /* colors */
     --color-primary:#FFE600;
     --color-secondary:#1B1B1B;
@@ -14,8 +15,16 @@
     --color-text-ligt:#FBFBFB;
     --color-text-dark:#1B1B1B;
     --color-text-gray:#B0B0B0;
+
+    /* padding */
+    --padding:2rem;
 }
+
 /* flex */
+  .flex{
+    display:flex;
+  }
+
 .flex-row-jc-ac{
     display:flex;
     flex-flow: row;
@@ -39,8 +48,8 @@
   
   
   /* container */
-   /* "place it inside the parent for the contents, not outside the parent*/
   .container{ 
+    width:100%;
     padding-right: var(--padding);
     padding-left: var(--padding);
     margin-right: auto;
@@ -48,7 +57,7 @@
   }
   
   /* extra small screen */
-  @media all and (max-width:576px){
+  @media all and (min-width:576px){
     .container{
       width:540px;
     }

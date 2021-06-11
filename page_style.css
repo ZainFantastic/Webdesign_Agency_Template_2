@@ -1,0 +1,114 @@
+/* reset */
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body{
+  width:100%;
+  padding:0;
+  margin:0;
+  font-family: var(--font-reg);
+  overflow-x: hidden;
+}
+*,::before,::after{
+    box-sizing:border-box;
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration:none;
+  color:var(--color-text-ligt);
+}
+
+
+
+/* navbar */
+.navbar{
+  width:100%;
+  min-height:80px;
+  background-color: var(--color-secondary);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+}
+.navbar .box{
+  justify-content:space-between;
+}
+.navbar .nav-icon{
+  position:relative;
+}
+.navbar .nav-icon .icon{
+  cursor: pointer;
+}
+.navbar .nav-icon .icon span{
+  display: none;
+  width:35px;
+  height:1.5px;
+  margin:0.20rem;
+  background-color: var(--color-primary);
+}
+
+.links-menu .link a{
+  position:relative;
+  display:block;
+  text-transform:capitalize;
+  font-family:var(--font-bold);
+  text-align:center;
+  padding:0.5rem;
+  margin: 1rem;
+}
+.links-menu .link a::before{
+  content:'';
+  display: block;
+  position:absolute;
+  background-color: var(--color-primary);
+  width:100%;
+  transform: scale(0);
+  transform-origin:center;
+  height:1px;
+  bottom:0;
+  left:0;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 0 10px #ffe60070 ;
+}
+.links-menu .link a:hover::before{
+  transform:scale(1);
+}
+
+ /* extra small to small screen devices max width 768px */
+@media all and (max-width:768px){
+  .navbar .nav-icon:hover .icon .links-menu{
+    visibility: visible;
+    opacity: 1;
+  }
+  .navbar .nav-icon .icon span{
+    display: block;
+  }
+  .navbar .nav-icon .icon .links-menu{
+    visibility: hidden;
+    opacity: 0;
+    background-color:var(--color-secondary);
+    width:150px;
+    height:auto;
+    border-radius:0.5rem 0 0.5rem 0.5rem;
+    flex-flow:column wrap;
+    position:absolute;
+    top:calc(100% + 45px);
+    right:10%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    transition: all 0.35s ease-in;
+  }
+  .navbar .nav-icon .icon .links-menu::before{
+    content:'';
+    position:absolute;
+    background-color: transparent;
+    top:-30px;
+    right:0;
+    border-width:15px  ;
+    border-style: solid;
+    border-color: transparent transparent var(--color-secondary) transparent;
+  }
+}
+
