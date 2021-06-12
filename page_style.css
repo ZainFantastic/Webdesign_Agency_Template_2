@@ -7,7 +7,7 @@ body{
   width:100%;
   padding:0;
   margin:0;
-  font-family: var(--font-reg);
+  font-family: var(--font);
   overflow-x: hidden;
 }
 *,::before,::after{
@@ -28,7 +28,7 @@ a{
 /* navbar */
 .navbar{
   width:100%;
-  min-height:80px;
+  height:70px;
   background-color: var(--color-secondary);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 
@@ -54,7 +54,7 @@ a{
   position:relative;
   display:block;
   text-transform:capitalize;
-  font-family:var(--font-bold);
+  font-weight:300;
   text-align:center;
   padding:0.5rem;
   margin: 1rem;
@@ -112,3 +112,92 @@ a{
   }
 }
 
+
+/* intro */
+.intro{
+  position:relative;
+  height:calc(80vh - 70px);
+  background:url(images/hero.jpg) center fixed no-repeat ;
+  object-fit:cover;
+}
+.intro .layer{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.65);
+  z-index:1;
+}
+.intro .section-text{
+  color:var(--color-text-ligt);
+  text-align:center;
+  position:relative;
+  top:-3rem;
+  z-index:2;
+}
+.intro .spacing{
+  letter-spacing:10px;
+}
+.intro h1{
+  margin-bottom:3rem;
+  font-size:1.75rem;
+  text-transform:uppercase;
+  font-weight:500
+}
+.intro h3{
+  margin-bottom:8rem;
+  letter-spacing:8px !important;
+  font-size:0.8rem;
+  font-weight:400;
+}
+/* special link effect */
+.yellow{
+  position:relative;
+  text-transform: uppercase;
+  letter-spacing:3px;
+  font-size:0.75rem;
+  color:var(--color-text-dark);
+  padding:1rem 2rem;
+  background-color:var(--color-primary);
+}
+.yellow::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  width:0%;
+  height:100%;
+  background-color:var(--color-secondary);
+  transition: all 0.5s ease-out;
+}
+.yellow span{
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s ease-out;
+}
+.yellow span::before{
+  content:'';
+  position:absolute;
+  background-color: transparent;
+  opacity: 0;
+  top:2.5px;
+  right:100%;
+  transform: translateX(-10px);
+  border-width:5px  ;
+  border-style: solid;
+  border-color: transparent transparent  transparent var(--color-text-ligt);
+  transition: all 0.5s ease-out;
+}
+.yellow:hover::before{
+  width:100%;
+}
+.yellow:hover span{
+  color: var(--color-text-ligt);
+  transform:translateX(10px);
+}
+.yellow:hover span::before{
+  transform: translateX(-5px);
+  opacity: 1;
+}

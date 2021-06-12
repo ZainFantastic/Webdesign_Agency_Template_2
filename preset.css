@@ -1,11 +1,7 @@
 /* preset */
 :root{
-    /* fonts */
-    --font-light:Roboto-Light,Arial;
-    --font-light-i:Roboto-LightItalic,Arial;
-    --font-reg:'Roboto',Roboto-Regular,Arial;
-    --font-med:'Roboto',Roboto-Medium,Arial;
-    --font-bold:'Roboto',Roboto-Bold,Arial;
+    /* font */
+    --font:'Roboto',Roboto-Regular,Arial;
 
     /* colors */
     --color-primary:#FFE600;
@@ -21,9 +17,6 @@
 }
 
 /* flex */
-  .flex{
-    display:flex;
-  }
 
 .flex-row-jc-ac{
     display:flex;
