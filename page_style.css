@@ -100,6 +100,7 @@ a{
     position:absolute;
     top:calc(100% + 45px);
     right:10%;
+    z-index:1000;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
     transition: all 0.35s ease-in;
   }
@@ -114,6 +115,7 @@ a{
     border-color: transparent transparent var(--color-secondary) transparent;
   }
 }
+
 
 
 /* intro */
@@ -155,7 +157,7 @@ a{
   font-size:0.8rem;
   font-weight:400;
 }
-/* special link effect */
+/* global special link effect */
 .yellow{
   position:relative;
   text-transform: uppercase;
@@ -206,19 +208,141 @@ a{
   opacity: 1;
 }
 
+
 /* about us */
 .about-us{
-  padding:5rem 0;
+  padding:var(--padding-sections) 0;
   text-align: center;
 }
-.about-us img{
-  display: block;
-  width:100px;
-  color:var(--color-primary);
-  margin:0 auto;
-}
 .about-us p{
- width:50vw;
+  width:50vw;
   margin:0 auto;
   margin-top:5rem;
+}
+/* global sections icons */
+.section-icon{
+  display: block;
+  width:100px;
+  margin:0 auto 1.5rem auto;
+}
+
+
+/* sevices */
+.services{
+  padding:var(--padding-sections) 0;
+  background-color:var(--color-bg-dark);
+}
+/* glabal sections heading */
+.section-text .section-heading{
+  position:relative;
+  color:var(--color-text-dark);
+  font-size:2rem;
+  letter-spacing:12px;
+  text-align:center;
+  text-transform:uppercase;
+  font-weight:500;
+  text-shadow: 2.5px 2.5px 0px #ebd727,
+               5px 5px 1px #c7b835 ;
+}
+/* global section info */
+.section-info{
+  width:60vw;
+  text-align:center;
+  margin:3rem auto 6rem auto;
+}
+.services .services-cards .card{
+  padding: 4rem 2rem;
+  background-color:var(--color-bg-light);
+  display:flex;
+  flex-flow:column wrap;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+  box-shadow:  1px 5px 20px rgba(0,0,0,0.1) ;
+}
+.services .services-cards .card .bottom{
+  text-align: left;
+  font-weight:500;
+  width:100%;
+  border-top: 1px solid #ccc;
+}
+/* services progress bars */
+.card .bottom .progress-bar .bar{
+  position:relative;
+  width:100% !important;
+  height:8px;
+  background-color:var(--color-bg-dark);
+  border-radius:2rem;
+  overflow: hidden;
+}
+.card .bottom .progress-bar .bar::before{
+  content:'';
+  width:100%;
+  height:100%;
+  background-color: var(--color-primary);
+  position:absolute;
+  top:0;
+  left:0;
+}
+/* graphic design */
+.card.one .progress-bar.one .bar::before{
+  width:80%;
+}
+.card.one .progress-bar.two .bar::before{
+  width:100%;
+}
+.card.one .progress-bar.three .bar::before{
+  width:75%;
+}
+/* web design */
+.card.two .progress-bar.one .bar::before{
+  width:90%;
+}
+.card.two .progress-bar.two .bar::before{
+  width:80%;
+}
+.card.two .progress-bar.three .bar::before{
+  width:100%;
+}
+/* web development */
+.card.three .progress-bar.one .bar::before{
+  width:100%;
+}
+.card.three .progress-bar.two .bar::before{
+  width:95%;
+}
+.card.three .progress-bar.three .bar::before{
+  width:70%;
+}
+/* app development */
+.card.four .progress-bar.one .bar::before{
+  width:65%;
+}
+.card.four .progress-bar.two .bar::before{
+  width:80%;
+}
+.card.four .progress-bar.three .bar::before{
+  width:55%;
+}
+
+.services .counter{
+  margin-top:2rem;
+  padding:var(--padding-sections);
+  background-color:var(--color-secondary)
+}
+.services .counter .box{
+  padding: 1rem 1.5rem;
+  text-align:center;
+  background-color: var(--color-bg-light);
+}
+.services .counter .box h2,
+.services .counter .box h3{
+  margin: 0;
+}
+.services .counter .box .gray{
+  margin-top:0.5rem;
+  text-transform:uppercase ;
+  letter-spacing: 2px;
+  color:var(--color-text-gray);
+  font-size:1.125rem;
 }

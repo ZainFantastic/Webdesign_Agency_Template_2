@@ -14,6 +14,7 @@
 
     /* padding */
     --padding:2rem;
+    --padding-sections:5rem;
 }
 
 /* flex */
@@ -35,8 +36,8 @@
   /* grid */
   .grid{
     display:grid;
-    gap:1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    gap:2em;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
   }
   
   
