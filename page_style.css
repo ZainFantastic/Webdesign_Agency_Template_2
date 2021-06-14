@@ -220,6 +220,7 @@ a{
 /* about us */
 .about-us{
   padding:var(--padding-sections) ;
+  margin-bottom:5rem;
   text-align: center;
 }
 .about-us p{
@@ -406,18 +407,17 @@ a{
 }
 .portfolio .portfolio-gallery .pic:hover .yellow-layer,
 .portfolio .portfolio-gallery .pic:hover .info {
-  visibility: visible;
+  opacity:1;
 }
 .portfolio .portfolio-gallery .pic img{
   width:100%;
   height:auto;
 }
 .portfolio-gallery .pic .yellow-layer{
-  visibility: hidden;
   width:75%;
   height:90%;
-  background-color:var(--color-primary);
-  opacity:0.5;
+  background-color:#ffe600a8;
+  opacity:0;
   position:absolute;
   top:50%;
   left:50%;
@@ -427,10 +427,10 @@ a{
 }
 
 .portfolio-gallery .pic .info{
-  visibility: hidden;
   width:90%;
   padding:0.25rem;
-  background-color: var(--color-bg-light);
+  background-color: #ffffffd5;
+  opacity:0;
   position:absolute;
   top:50%;
   left:50%;
