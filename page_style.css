@@ -219,7 +219,7 @@ a{
 
 /* about us */
 .about-us{
-  padding:var(--padding-sections) 0;
+  padding:var(--padding-sections) ;
   text-align: center;
 }
 .about-us p{
@@ -237,7 +237,7 @@ a{
 
 /* sevices */
 .services{
-  padding:var(--padding-sections) 0;
+  padding:var(--padding-sections);
   background-color:var(--color-bg-dark);
 }
 /* glabal sections heading */
@@ -335,7 +335,7 @@ a{
 
 .services .counter{
   margin-top:2rem;
-  padding:var(--padding-sections);
+  padding:2rem;
   background-color:var(--color-secondary)
 }
 .services .counter .box{
@@ -353,4 +353,91 @@ a{
   letter-spacing: 2px;
   color:var(--color-text-gray);
   font-size:1.125rem;
+}
+
+
+/* portfolio */
+.portfolio{
+  padding:var(--padding-sections) ;
+}
+.portfolio .portfolio-show .portfolio-text{
+  margin:10rem 0;
+  text-transform:uppercase;
+  text-align:center;
+  font-size:1rem;
+}
+.portfolio-text h2{
+  cursor:pointer;
+  font-weight:300;
+  margin:1rem 3rem;
+}
+
+/* small screen devices max width 768px */
+@media all and (max-width:768px){
+  .portfolio .portfolio-show .portfolio-text{
+    flex-flow:column wrap !important;
+  }
+  .portfolio-text .one{
+    order:2;
+  }
+  .portfolio-text .two{
+    order:3;
+  }
+  .portfolio-text .three{
+    order:1;
+    margin-bottom:1rem;
+    border-bottom:3px solid #ccc;
+    padding-bottom:1rem
+  }
+  .portfolio-text .four{
+    order:4;
+  }
+  .portfolio-text .five{
+    order:5;
+  }
+}
+
+.portfolio .portfolio-gallery{
+  gap:0;
+}
+.portfolio .portfolio-gallery .pic{
+  position:relative;
+  text-align:center;
+}
+.portfolio .portfolio-gallery .pic:hover .yellow-layer,
+.portfolio .portfolio-gallery .pic:hover .info {
+  visibility: visible;
+}
+.portfolio .portfolio-gallery .pic img{
+  width:100%;
+  height:auto;
+}
+.portfolio-gallery .pic .yellow-layer{
+  visibility: hidden;
+  width:75%;
+  height:90%;
+  background-color:var(--color-primary);
+  opacity:0.5;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index:1;
+  transition: all 0.25s ease-in-out;
+}
+
+.portfolio-gallery .pic .info{
+  visibility: hidden;
+  width:90%;
+  padding:0.25rem;
+  background-color: var(--color-bg-light);
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index:2;
+  transition: all 0.25s ease-in-out;
+}
+.portfolio .yellow{
+  margin:2rem 0;
 }
