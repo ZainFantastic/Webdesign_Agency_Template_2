@@ -12,8 +12,9 @@ body{
 }
 body::before{
   content: '';
+  display:block;
   width: 100%;
-  height:75px;
+  height:68.5px;
 }
 *,::before,::after{
     box-sizing:border-box;
