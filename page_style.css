@@ -337,10 +337,13 @@ a{
 
 .services .counter{
   margin-top:2rem;
-  padding:2rem;
-  background-color:var(--color-secondary)
+  padding:3rem;
+  background-color:var(--color-secondary);
+  flex-wrap:wrap;
+  gap:1rem;
 }
 .services .counter .box{
+  flex: 1 1 250px;
   padding: 1rem 1.5rem;
   text-align:center;
   background-color: var(--color-bg-light);
@@ -372,7 +375,7 @@ a{
 .portfolio-text h2{
   cursor:pointer;
   font-weight:300;
-  margin:1rem 3rem;
+  margin:1rem 2rem;
 }
 
 /* small screen devices max width 768px */
@@ -522,9 +525,9 @@ a{
   width:100%;
   margin:0;
   padding:1rem 2rem;
-  font-weight:500;
+  font-weight:400;
   background-color:#ffe600cb;
   position:absolute;
-  top:-65px;
+  top:-68px;
   left:0;
 }
