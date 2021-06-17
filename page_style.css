@@ -89,7 +89,7 @@ a{
   transform:scale(1);
 }
 
- /* extra small to small screen devices max width 768px */
+ /* screen devices with max width 768px */
 @media all and (max-width:768px){
   .navbar .nav-icon:hover .icon .links-menu{
     visibility: visible;
@@ -378,7 +378,7 @@ a{
   margin:1rem 2rem;
 }
 
-/* small screen devices max width 768px */
+/*  screen devices with max width 768px */
 @media all and (max-width:768px){
   .portfolio .portfolio-show .portfolio-text{
     flex-flow:column wrap !important;
@@ -541,8 +541,11 @@ a{
   position:relative;
   height:250px !important;
 }
+.vision .vision-line .box{
+  height:100%;
+}
 .vision .vision-line p{
-  width:40vw;
+  width:40%;
   text-align:center;
 }
 .vision-line .bottom-left span{
@@ -563,10 +566,9 @@ a{
 .vision .vision-line.one .top-left{
   position:relative;
   top:50%;
-  width:550px;
-  height:450px;
-  margin:2rem;
-  padding: 3rem;
+  width:40%;
+  max-height:450px;
+  padding:2rem;
   background-color:var(--color-secondary);
   color:var(--color-text-gray);
   text-align:left;
@@ -576,17 +578,42 @@ a{
 .vision .vision-line.two{
   background-color:var(--color-primary);
 }
-
 /* line three */
-.vision-line.three .container{
-  height:100%;
-}
 .vision .vision-line.three .bottom-right{
   position:relative;
   bottom:50%;
-  width:550px;
+  padding:2rem;
+  width:40%;
   height:450px;
-  margin:2rem;
-  margin:2rem;
+}
+
+/* screen devices with max width 1200px */
+@media all and (max-width:1200px){
+  .vision-line.one{
+    height:auto !important;
+  }
+  .vision-line .box{
+    display: block;
+  }
+  .vision-line .box>*{
+    width:100% !important;
+  }
+  .vision-line .box p{
+    margin:5rem 0;
+  }
+  .vision-line .box p span{
+    text-align:center;
+  }
+  .vision-line.three .box p{
+    position: relative;
+    top:-100%;
+  }
+  .vision .vision-line.one .top-left{
+    top:unset;
+  }
+  .vision .vision-line.three .bottom-right{
+    top:-100%;
+    bottom: unset;
+  }
 }
 
