@@ -517,6 +517,12 @@ a{
 .team .team-members .box:hover{
   transform:translateY(-10px);
 }
+
+.team .team-members .box .profile img{
+  display:block;
+  width:100%;
+  height:auto;
+}
 .team .team-members .box .team-text{
   position:relative;
   padding:1rem;
@@ -529,7 +535,7 @@ a{
   font-weight:400;
   background-color:#ffe600cb;
   position:absolute;
-  top:-68px;
+  top:-60px;
   left:0;
 }
 
