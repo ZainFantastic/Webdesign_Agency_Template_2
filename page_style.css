@@ -603,6 +603,9 @@ a{
   .vision-line.one{
     height:auto !important;
   }
+  .vision .vision-line.one .top-left{
+    overflow:auto;
+  }
   .vision-line .box{
     display: block;
   }
