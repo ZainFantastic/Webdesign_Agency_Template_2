@@ -660,6 +660,9 @@ footer .box .f-link a {
   font-size:0.75rem;
   letter-spacing:2px;
 }
+footer .box .f-link a:hover{
+  color:var(--color-primary);
+}
 footer .footer-contact-us .contact-btn{
   display:block;
   padding: 0.5rem 2rem;
@@ -677,6 +680,7 @@ footer .footer-contact-us .social-media ul li{
   margin: 0.5rem;
 }
 
+/* devices with screen max width 768px */
 @media all and (max-width:768px){
   footer .box,
   footer .footer-company{
